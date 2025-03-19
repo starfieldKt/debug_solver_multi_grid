@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ============================================
+ ソルバーの基本情報
+============================================= -->
+<SolverDefinition 
+name="Debug_solver_multi_grid" 
+caption="Debug solver multi grid" 
+version="1.0.25031901" 
+copyright="Keita Hoshino" 
+release="2025.03.19" 
+homepage="" 
+executable="debug_solver.py" 
+iterationtype="time" 
+gridtype="structured2d"
+>
+
+    <!-- ============================================
+     計算条件の定義
+    ============================================= -->
+    <CalculationCondition>
+        <Tab name="Condition" caption="Condition">
+            <Item name="time_end" caption="time end">
+                <Definition valueType="integer" default="10"/>
+            </Item>
+            <Item name="ksize" caption="z-direction size">
+                <Definition valueType="integer" default="10"/>
+            </Item>
+            <Item name="average_WL" caption="average water level">
+                <Definition valueType="real" default="1.0"/>
+            </Item>
+            <Item name="wave_height" caption="wave height">
+                <Definition valueType="real" default="0.5"/>
+            </Item>
+        </Tab>
+    </CalculationCondition>
+
+    <GridRelatedCondition>
+    </GridRelatedCondition>
+
+</SolverDefinition>
