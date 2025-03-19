@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PostProcessor type="post3dwindow" index="1" objectBrowserVisible="true" backgroundColor="#ffffff" minimized="false" maximized="false" left="878" top="0" width="915" height="922">
+    <Camera positionX="-4.87594" positionY="0.31307" positionZ="3.55658" focalpointX="1.31709" focalpointY="0.681585" focalpointZ="0.869383" viewupX="0.377186" viewupY="0.220462" viewupZ="0.899515" roll="77.2445" parallelscale="1.74986" parallelprojection="true"/>
+    <DataModel ZScale="1" isExpanded="false">
+        <GridType checkState="2" isExpanded="true" name="Debug_solver_multi_grid">
+            <Zones>
+                <Zone checkState="2" isExpanded="true" name="iRICZone">
+                    <Shape checkState="2" isExpanded="true" color="#000000" shape="1" indexVisible="false" indexTextSettingFontFamily="2" indexTextSettingFontColor="#000000" indexTextSettingFontSize="15" indexTextSettingFontIsBold="false" indexTextSettingFontIsItalic="false" indexTextSettingFontIsShadow="false"/>
+                    <StringResult checkState="2" isExpanded="true">
+                        <StringResult fontColor="#000000" font="Times New Roman,16,-1,5,50,0,0,0,0,0,Regular" backgroundColor="#c0c0c0" position="4" horizontalMarginRatio="0" verticalMarginRatio="0" autoSize="true" width="100" height="100">
+                            <Script>return &quot;&quot;;</Script>
+                        </StringResult>
+                    </StringResult>
+                </Zone>
+            </Zones>
+        </GridType>
+        <Title checkState="2" isExpanded="true" title="" fontFamily="0" fontColor="#000000" fontSize="20" fontIsBold="false" fontIsItalic="false" fontIsShadow="false"/>
+        <Time checkState="2" isExpanded="true" useProjectSetting="true" timeFormat="elapsed|SS sec" customFormat="" showTimeZone="false" fontFamily="0" fontColor="#000000" fontSize="13" fontIsBold="false" fontIsItalic="false" fontIsShadow="false"/>
+        <Axes checkState="2" isExpanded="true"/>
+        <Logo isExpanded="true" imageSize="1" position="7" horizontalMarginRatio="0.01" verticalMarginRatio="0.01" autoSize="true" width="100" height="100"/>
+    </DataModel>
+</PostProcessor>
