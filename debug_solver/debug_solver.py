@@ -12,22 +12,22 @@ print("----------Start----------")
 
 # iRICで動かす時用
 # =============================================================================
-# if len(sys.argv) < 2:
-#     print("Error: CGNS file name not specified.")
-#     exit()
+if len(sys.argv) < 2:
+    print("Error: CGNS file name not specified.")
+    exit()
 
-# cgns_name = sys.argv[1]
+cgns_name = sys.argv[1]
 
-# print("CGNS file name: " + cgns_name)
+print("CGNS file name: " + cgns_name)
 
 # CGNSをオープン
-# fid = iric.cg_iRIC_Open(cgns_name, iric.IRIC_MODE_MODIFY)
+fid = iric.cg_iRIC_Open(cgns_name, iric.IRIC_MODE_MODIFY)
 
 # コマンドラインで動かす時用
 # =============================================================================
 
 # CGNSをオープン
-fid = iric.cg_iRIC_Open("./project/Case1.cgn", iric.IRIC_MODE_MODIFY)
+# fid = iric.cg_iRIC_Open("./project/Case1.cgn", iric.IRIC_MODE_MODIFY)
 
 # 分割保存したい場合はこれを有効にする
 # os.environ['IRIC_SEPARATE_OUTPUT'] = '1'
