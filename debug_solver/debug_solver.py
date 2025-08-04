@@ -123,6 +123,10 @@ for t in range(time_end + 1):
     # k=ksize-1のz座標がdepth_2dになるように配置する
     grid_z_arr_3d = np.linspace(0, depth_2d[:, :, np.newaxis], ksize, axis=2)
 
+    # 相対Z位置を生成（0〜1に正規化されたk方向）
+    relative_z = np.linspace(0, 1, ksize)
+    relative_z_3d = np.tile(relative_z, (isize, jsize, 1))
+
     # 初回のみ、3次元格子をCGNSに書き込む
     if t == 0:
         gid_3d = iric.cg_iRIC_Write_Grid3d_Coords_WithGridId(fid,isize,jsize,ksize,grid_x_arr_3d.flatten(order="F"),grid_y_arr_3d.flatten(order="F"),grid_z_arr_3d.flatten(order="F"))
@@ -144,6 +148,8 @@ for t in range(time_end + 1):
     # 3次元格子に対する書き込み
     # 水深を書き込み（格子点実数値）
     iric.cg_iRIC_Write_Sol_Grid3d_Coords_WithGridId(fid, gid_3d, grid_x_arr_3d.flatten(order="F"), grid_y_arr_3d.flatten(order="F"), grid_z_arr_3d.flatten(order="F"))
+
+    iric.cg_iRIC_Write_Sol_Node_Real_WithGridId(fid,gid_3d, "Sigma", relative_z_3d.flatten(order="F"))
 
     # CGNSへの書き込み終了をGUIに伝える
     iric.cg_iRIC_Write_Sol_End(fid)
